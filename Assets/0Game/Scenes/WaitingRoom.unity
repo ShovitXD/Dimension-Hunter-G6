@@ -1883,6 +1883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 932867818}
   - component: {fileID: 932867819}
+  - component: {fileID: 932867820}
   m_Layer: 0
   m_Name: Waiting Room Manager
   m_TagString: Untagged
@@ -1924,6 +1925,28 @@ MonoBehaviour:
   - {fileID: 724443442}
   - {fileID: 1796187348}
   roomText: {fileID: 177534466}
+--- !u!114 &932867820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932867817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &936864109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,6 +2001,7 @@ MonoBehaviour:
   - {fileID: 2043820797}
   - {fileID: 820419561}
   - {fileID: 2121482207}
+  playerPrefab: {fileID: 5429566170264816633, guid: e5f53bb67391679429cb7bdf26201cb0, type: 3}
 --- !u!114 &936864112
 MonoBehaviour:
   m_ObjectHideFlags: 0

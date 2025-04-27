@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
     public string RoomCode { get; private set; }
 
     public static int playerTeam = -1;
+
+    // Add a reference to the local player's GameObject--------
+    public GameObject LocalPlayerInstance { get; set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -28,8 +32,8 @@ public class GameManager : MonoBehaviour
     public void AssignTeam(int team)
     {
         playerTeam = team;
-
     }
+
     public int GetPlayerTeam()
     {
         return playerTeam;

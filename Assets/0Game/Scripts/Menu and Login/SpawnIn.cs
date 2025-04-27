@@ -5,9 +5,9 @@ using UnityEngine;
 public class SpawnIn : MonoBehaviourPunCallbacks
 {
     [Header("Player Prefab and Spawn Points")]
-    public GameObject playerPrefab; // The player prefab to spawn
-    public Transform[] spawnPoints; // Array of spawn points
-    public TMP_Text roomText;
+    public GameObject playerPrefab;  // The player prefab to spawn
+    public Transform[] spawnPoints;  // Array of spawn points
+    public TMP_Text roomText;  // Room display text
 
     void SpawnPlayer()
     {
@@ -32,6 +32,12 @@ public class SpawnIn : MonoBehaviourPunCallbacks
 
         // Initialize the local player
         _player.GetComponent<PlayerSetup>().IsLocalPlayer();
+
+        // Store the reference of the local player in the GameManager------
+        if (_player.GetComponent<PhotonView>().IsMine)
+        {
+            GameManager.Instance.LocalPlayerInstance = _player;
+        }
     }
 
     public override void OnJoinedRoom()
